@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Black Hollow | Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app" data-role="player">
+    <header>
+      <h1>Detective Terminal</h1>
+      <p>Join the case, unlock files as chapters advance, and submit your verdict.</p>
+    </header>
+
+    <section class="panel">
+      <h2>Join</h2>
+      <div class="submit-row">
+        <input id="roomCode" type="text" placeholder="Join code" />
+        <input id="playerName" type="text" placeholder="Your name" />
+        <button id="joinBtn" class="primary-btn">Join Case</button>
+        <div id="joinStatus" class="result">Not connected.</div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Case Overview</h2>
+      <div id="caseOverview" class="status">Waiting for host to start a game.</div>
+    </section>
+
+    <section class="panel">
+      <h2>Unlocked Files</h2>
+      <div id="fileList" class="grid"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Case Intel</h2>
+      <div id="caseIntel" class="grid"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Solve</h2>
+      <div class="solve">
+        <div class="question">
+          <strong>Who is telling the truth?</strong>
+          <div id="truthOptions"></div>
+        </div>
+        <div class="question">
+          <strong>Who went to the Old Well?</strong>
+          <div id="wellOptions"></div>
+        </div>
+        <div class="question">
+          <strong>Who is guilty?</strong>
+          <div id="guiltyOptions"></div>
+        </div>
+        <div class="submit-row">
+          <button id="submitSolution" class="primary-btn">Submit Answer</button>
+          <div id="attempts" class="result">Attempts: 0</div>
+          <div id="solveResult" class="result">Awaiting your verdict.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>Detective System: Player Terminal</footer>
+  </main>
+
+  <script type="module" src="client.js"></script>
+</body>
+</html>
