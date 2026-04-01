@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Black Hollow | Host</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app" data-role="host">
+    <header>
+      <h1>Main TV Control</h1>
+      <p>Set difficulty, choose a case, and unlock chapters for all connected detectives.</p>
+    </header>
+
+    <section class="panel">
+      <h2>Local IP</h2>
+      <p>Share this address with players on the same Wi-Fi.</p>
+      <div id="ipList" class="facts"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Game Setup</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Difficulty</h3>
+          <select id="difficulty">
+            <option>Easy</option>
+            <option>Medium</option>
+            <option>Hard</option>
+          </select>
+          <p class="status">Easy = 3 chapters, Medium = 4, Hard = 5.</p>
+        </div>
+        <div class="card">
+          <h3>Player Limit</h3>
+          <input id="playerLimit" type="number" min="1" max="12" value="4" />
+        </div>
+        <div class="card">
+          <h3>Case</h3>
+          <select id="caseSelect"></select>
+        </div>
+      </div>
+      <div class="submit-row" style="margin-top: 12px;">
+        <button id="startGame" class="primary-btn">Start Game</button>
+        <button id="resetGame" class="secondary-btn">Reset Lobby</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Chapter Control</h2>
+      <div class="submit-row">
+        <button id="advanceChapter" class="primary-btn">Advance Chapter</button>
+        <div id="chapterStatus" class="result">No game running.</div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Connected Players</h2>
+      <div id="playerList" class="facts"></div>
+    </section>
+
+    <footer>Detective System: Host Console</footer>
+  </main>
+
+  <script src="client.js"></script>
+</body>
+</html>
